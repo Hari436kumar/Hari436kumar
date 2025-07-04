@@ -1,6 +1,19 @@
-import ShinyText from './ShinyText';
-  
-<ShinyText text="Just some shiny text!" disabled={false} speed={3} className='custom-class' />
+import './ShinyText.css';
+
+const ShinyText = ({ text, disabled = false, speed = 5, className = '' }) => {
+  const animationDuration = `${speed}s`;
+
+  return (
+    <div
+      className={`shiny-text ${disabled ? 'disabled' : ''} ${className}`}
+      style={{ animationDuration }}
+    >
+      {text}
+    </div>
+  );
+};
+
+export default ShinyText;
 
 ## 🌐 Socials:
 [![Bluesky](https://img.shields.io/badge/bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=%23FFFFFF)](https://bsky.app/profile/Hari436kumar) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/Hari Bhai) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/LInk with Harish) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:xyz@gmail.com) 
