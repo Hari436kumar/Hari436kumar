@@ -1,40 +1,6 @@
-const ShinyText = ({ text, disabled = false, speed = 5, className = '' }) => {
-  const animationDuration = `${speed}s`;
-
-  return (
-    <div
-      className={`text-[#b5b5b5a4] bg-clip-text inline-block ${disabled ? '' : 'animate-shine'} ${className}`}
-      style={{
-        backgroundImage: 'linear-gradient(120deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 60%)',
-        backgroundSize: '200% 100%',
-        WebkitBackgroundClip: 'text',
-        animationDuration: animationDuration,
-      }}
-    >
-      {text}
-    </div>
-  );
-};
-
-export default ShinyText;
-
-// tailwind.config.js
-// module.exports = {
-//   theme: {
-//     extend: {
-//       keyframes: {
-//         shine: {
-//           '0%': { 'background-position': '100%' },
-//           '100%': { 'background-position': '-100%' },
-//         },
-//       },
-//       animation: {
-//         shine: 'shine 5s linear infinite',
-//       },
-//     },
-//   },
-//   plugins: [],
-// };
+import ShinyText from './ShinyText';
+  
+<ShinyText text="Just some shiny text!" disabled={false} speed={3} className='custom-class' />
 
 ## 🌐 Socials:
 [![Bluesky](https://img.shields.io/badge/bluesky-0285FF?style=for-the-badge&logo=bluesky&logoColor=%23FFFFFF)](https://bsky.app/profile/Hari436kumar) [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/Hari Bhai) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/LInk with Harish) [![email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:xyz@gmail.com) 
